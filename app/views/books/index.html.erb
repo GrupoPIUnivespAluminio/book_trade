@@ -1,3 +1,34 @@
-<% @books.each do |book| %>
-  <%= link_to book.title, book_path(book) %>
-<% end %>
+<section class='feed'>
+  <section class='user-menu'>
+    <image class='user-menu-image' src='https://via.placeholder.com/150' />
+    <h3 class='user-menu-name'>Name</h3>
+    <div class='user-menu-links'>
+      <a class='user-menu-link' href='#'>Link</a>
+      <a class='user-menu-link' href='#'>Link</a>
+      <a class='user-menu-link' href='#'>Link</a>
+      <a class='user-menu-link' href='#'>Link</a>
+    </div>
+    <a class='user-menu-btn btn purple' href='#'>Perfil</a>
+  </section>
+
+  <section class='books-list'>
+    <% @books.each do |book| %>
+    <div class='card transparent'>
+      <div class='card-content'>
+        <span class='card-title'>
+          <%= link_to truncate(book.title, length: 25), book_path(book) %>
+        </span>
+        <p><%= truncate(book.description, length: 25) %></p>
+      </div>
+    </div>
+    <% end %>
+  </section>
+
+  <section class='user-sidemenu'>
+    <h3 class='user-sidemenu-title'>Title</h3>
+    <a class='user-sidemenu-link' href='#'>Link</a>
+    <a class='user-sidemenu-link' href='#'>Link</a>
+    <a class='user-sidemenu-link' href='#'>Link</a>
+    <a class='user-sidemenu-link' href='#'>Link</a>
+  </section>
+</section>

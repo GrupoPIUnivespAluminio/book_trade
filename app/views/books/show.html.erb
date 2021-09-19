@@ -1,3 +1,27 @@
-<%= @book.title %>
-<%= @book.author %>
-<%= @book.description %>
+<section class='feed'>
+  <section class='user-menu'>
+    <image class='user-menu-image' src='https://via.placeholder.com/150' />
+    <h3 class='user-menu-name'>Name</h3>
+    <div class='user-menu-links'>
+      <a class='user-menu-link' href='#'>Link</a>
+      <a class='user-menu-link' href='#'>Link</a>
+      <a class='user-menu-link' href='#'>Link</a>
+      <a class='user-menu-link' href='#'>Link</a>
+    </div>
+    <a class='user-menu-btn btn purple' href='#'>Perfil</a>
+  </section>
+
+  <section class='book-info'>
+    <h1><%= @book.title %></h1>
+    <h3><%= @book.author %></h3>
+    <p><%= @book.description %></p>
+  </section>
+
+  <section class='user-sidemenu'>
+    <h3 class='user-sidemenu-title'>Title</h3>
+    <a class='user-sidemenu-link' href='#'>Link</a>
+    <a class='user-sidemenu-link' href='#'>Link</a>
+    <a class='user-sidemenu-link' href='#'>Link</a>
+    <a class='user-sidemenu-link' href='#'>Link</a>
+  </section>
+</section>

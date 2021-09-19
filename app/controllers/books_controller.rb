@@ -1,4 +1,5 @@
 class BooksController < ApplicationController
+  before_action :authenticate_user!, only: %i[index new create edit update]
   before_action :find_book, only: %i[show edit update]
 
   def index

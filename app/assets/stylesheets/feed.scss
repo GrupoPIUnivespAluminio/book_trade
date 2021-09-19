@@ -1,0 +1,36 @@
+.feed {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-gap: 1rem;
+}
+
+.user-menu {
+  padding: 2rem;
+  text-align: center;
+
+  .user-menu-image {
+    border-radius: 50%;
+  }
+
+  .user-menu-name {
+    margin-bottom: 2rem;
+  }
+
+  .user-menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 3rem;
+  }
+
+  .user-menu-links {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+
+    .user-menu-link {
+      padding: 0.5em;
+    }
+  }
+}
