@@ -6,6 +6,11 @@ feature 'User adds a book' do
     login_as(@user)
   end
 
+  scenario 'root path have link to add new book' do
+    visit root_path
+    expect(page).to have_link('Adicionar Livro')
+  end
+
   scenario 'successfully' do
     visit new_book_path
     fill_in 'Title', with: 'New book'

@@ -1,3 +1,5 @@
 class HomepageController < ApplicationController
-  def index; end
+  def index
+    @hide_nav = true
+  end
 end

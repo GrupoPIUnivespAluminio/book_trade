@@ -13,9 +13,12 @@
   </head>
 
   <body>
+    <%= render 'layouts/shared/navbar' unless @hide_nav %>
+
     <% flash.each do |name, msg| %>
       <p class="<%= name %>"><%= msg %></p>
     <% end %>
+
     <%= yield %>
   </body>
 </html>
