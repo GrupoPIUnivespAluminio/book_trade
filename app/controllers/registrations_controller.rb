@@ -8,6 +8,6 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:account_update, keys: [:name, :bio])
+    devise_parameter_sanitizer.permit(:account_update, keys: [:name, :bio, :avatar])
   end
 end

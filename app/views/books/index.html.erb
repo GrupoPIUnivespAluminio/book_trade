@@ -1,6 +1,8 @@
 <section class='feed'>
   <section class='user-menu'>
-    <image class='user-menu-image' src='https://via.placeholder.com/150' />
+    <% if current_user.avatar.attached? %>
+      <%= image_tag(current_user.avatar.variant(resize_to_fit: [200, 150]), class: 'user-menu-image responsive-img') %>
+    <% end %>
     <h3 class='user-menu-name'>Name</h3>
     <div class='user-menu-links'>
       <a class='user-menu-link' href='#'>Link</a>
@@ -14,6 +16,11 @@
   <section class='books-list'>
     <% @books.each do |book| %>
     <div class='card transparent'>
+     <div class="card-image">
+       <% if book.cover.attached? %>
+         <%= image_tag(book.cover) %>
+       <% end %>
+     </div>
       <div class='card-content'>
         <span class='card-title'>
           <%= link_to truncate(book.title, length: 25), book_path(book) %>
