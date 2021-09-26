@@ -1,24 +1,47 @@
-# README
+# Book Trade
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 
-Things you may want to cover:
+Este é o repositório de uma aplicação desenvolvida com Ruby on Rails, utilizando Git como ferramenta de versionamento de código e parte do Projeto Integrador da Univesp.
 
-* Ruby version
+Esta aplicação é desenvolvida pelo grupo de alunos da Univesp, no Polo de Alumínio - SP
 
-* System dependencies
+## Os integrantes:
+ - Aroldo
+ - Gilson
+ - Odirlei
+ - [Paulo] (https://twitter.com/paulor2222)
 
-* Configuration
+## Como Rodar esse projeto localmente
 
-* Database creation
+Você precisa ter instalados o Ruby, na versão 3.0 ou maior
+Você precisa ter o framework Ruby on Rails instalado na versão 6 ou maior
+Você precisa ter o banco de dados Postgres instalado
 
-* Database initialization
+Clone o projeto
 
-* How to run the test suite
+```bash
+git clone https://github.com/GrupoPIUnivespAluminio/book_trade.git
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+Entre no diretório do projeto
 
-* Deployment instructions
+```bash
+cd book_trade
+```
 
-* ...
+Instale as dependências
+
+```bash
+bundle install
+```
+Inicialize o banco de dados
+
+```bash
+bundle exec rails db:setup
+```
+Suba o servidor
+
+```bash
+bundle exec rails s
+```
