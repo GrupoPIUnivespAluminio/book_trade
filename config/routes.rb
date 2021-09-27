@@ -8,5 +8,7 @@ Rails.application.routes.draw do
 
   resources :books, only: %i[index show new create edit update]
 
+  resources :conversations, only: %i[show create]
+
   root 'homepage#index'
 end
