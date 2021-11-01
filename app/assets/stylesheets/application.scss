@@ -54,3 +54,12 @@ h6 {
 .purple {
   background-color: $purple;
 }
+
+.basic-form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: center;
+  margin: 10% 25% 0 25%;
+}
