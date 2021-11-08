@@ -1,17 +1,5 @@
 <section class='feed'>
-  <section class='user-menu'>
-    <% if current_user.avatar.attached? %>
-      <%= image_tag(current_user.avatar) %>
-    <% end %>
-    <h3 class='user-menu-name'>Name</h3>
-    <div class='user-menu-links'>
-      <a class='user-menu-link' href='#'>Link</a>
-      <a class='user-menu-link' href='#'>Link</a>
-      <a class='user-menu-link' href='#'>Link</a>
-      <a class='user-menu-link' href='#'>Link</a>
-    </div>
-    <a class='user-menu-btn btn purple' href='#'>Perfil</a>
-  </section>
+  <%= render 'layouts/shared/user_info_menu' %>
 
   <section class='book-info'>
     <% if @book.images.attached? %>
@@ -22,14 +10,9 @@
     <h1><%= @book.title %></h1>
     <h3><%= @book.author %></h3>
     <p><%= @book.description %></p>
+
+    <%= link_to 'Voltar', books_path %>
   </section>
 
-  <section class='user-sidemenu'>
-    <%= link_to 'Conversations', conversation_path(@book) %>
-    <h3 class='user-sidemenu-title'>Title</h3>
-    <a class='user-sidemenu-link' href='#'>Link</a>
-    <a class='user-sidemenu-link' href='#'>Link</a>
-    <a class='user-sidemenu-link' href='#'>Link</a>
-    <a class='user-sidemenu-link' href='#'>Link</a>
-  </section>
+  <%= render 'layouts/shared/user_side_menu' %>
 </section>

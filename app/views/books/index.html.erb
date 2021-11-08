@@ -1,17 +1,5 @@
 <section class='feed'>
-  <section class='user-menu'>
-    <% if current_user.avatar.attached? %>
-      <%= image_tag(current_user.avatar.variant(resize_to_fit: [200, 150]), class: 'user-menu-image responsive-img') %>
-    <% end %>
-    <h3 class='user-menu-name'>Name</h3>
-    <div class='user-menu-links'>
-      <a class='user-menu-link' href='#'>Link</a>
-      <a class='user-menu-link' href='#'>Link</a>
-      <a class='user-menu-link' href='#'>Link</a>
-      <a class='user-menu-link' href='#'>Link</a>
-    </div>
-    <a class='user-menu-btn btn purple' href='#'>Perfil</a>
-  </section>
+  <%= render 'layouts/shared/user_info_menu' %>
 
   <section class='books-list'>
     <% @books.each do |book| %>
@@ -31,11 +19,5 @@
     <% end %>
   </section>
 
-  <section class='user-sidemenu'>
-    <h3 class='user-sidemenu-title'>Title</h3>
-    <a class='user-sidemenu-link' href='#'>Link</a>
-    <a class='user-sidemenu-link' href='#'>Link</a>
-    <a class='user-sidemenu-link' href='#'>Link</a>
-    <a class='user-sidemenu-link' href='#'>Link</a>
-  </section>
+  <%= render 'layouts/shared/user_side_menu' %>
 </section>
