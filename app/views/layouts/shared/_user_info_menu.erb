@@ -4,6 +4,8 @@
   <% end %>
   <h3 class='user-menu-name'>Name</h3>
   <div class='user-menu-links'>
+    <%= link_to 'Perfil', user_path(current_user) %>
+    <%= link_to 'Editar Perfil', edit_user_registration_path(current_user) %>
     <a class='user-menu-link' href='#'>Link</a>
     <a class='user-menu-link' href='#'>Link</a>
     <a class='user-menu-link' href='#'>Link</a>
